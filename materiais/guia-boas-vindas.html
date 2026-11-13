@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Guia de Boas-Vindas</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  @page{size:A4;margin:0}
+  :root{--preto:#0e0e0c;--musgo:#353a23;--oliva:#7d8452;--nude:#e6d5c0;--creme:#f6efe6;--texto:#1d1c19;--suave:#5b574f}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Manrope,sans-serif;color:var(--texto);font-size:10.5pt;line-height:1.5;background:#fff}
+  .pg{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always}
+  .pg:last-child{page-break-after:auto}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.15}
+  .eyebrow{font-size:8pt;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--oliva)}
+  /* Página 1 */
+  .capa{background:var(--preto);color:var(--creme);height:118mm;display:grid;grid-template-columns:1.25fr .75fr}
+  .capa-txt{padding:18mm 0 0 16mm}
+  .capa h1{font-size:30pt;margin:8px 0 12px}
+  .capa h1 em{font-style:italic;color:var(--nude)}
+  .capa p{color:rgba(246,239,230,.8);max-width:96mm}
+  .capa .eyebrow{color:var(--nude)}
+  .capa img{width:100%;height:118mm;object-fit:cover;object-position:50% 20%;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%);mask-image:linear-gradient(to right,transparent 0,#000 30%)}
+  .conteudo{padding:10mm 16mm}
+  h2{font-size:16pt;color:var(--musgo);margin:0 0 8px}
+  .carta p+p{margin-top:8px}
+  .assin{font-family:'Playfair Display',serif;font-style:italic;font-size:14pt;color:var(--musgo);margin-top:8px}
+  .pilares{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+  .pilar{border:1px solid var(--nude);border-radius:10px;padding:10px;background:var(--creme)}
+  .pilar b{font-family:'Playfair Display',serif;font-size:18pt;color:var(--oliva);display:block;line-height:1}
+  .pilar h3{font-size:10.5pt;margin:4px 0 2px;color:var(--preto)}
+  .pilar p{font-size:8.5pt;color:var(--suave);line-height:1.35}
+  .rodape{position:absolute;bottom:8mm;left:16mm;right:16mm;font-size:8pt;color:var(--suave);display:flex;justify-content:space-between;border-top:1px solid var(--nude);padding-top:6px}
+  /* Página 2 */
+  .topo2{background:var(--musgo);color:var(--creme);padding:10mm 16mm 8mm}
+  .topo2 h2{color:var(--creme);margin:4px 0 0}
+  .topo2 .eyebrow{color:var(--nude)}
+  table{width:100%;border-collapse:collapse;font-size:8.8pt;margin-top:4px}
+  th{text-align:left;background:var(--preto);color:var(--creme);padding:5px 7px;font-weight:600}
+  td{padding:5px 7px;border-bottom:1px solid var(--nude);vertical-align:top}
+  td:first-child{font-weight:800;color:var(--musgo);white-space:nowrap}
+  .duas{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+  .box{border:1px solid var(--nude);border-radius:10px;padding:10px 12px}
+  .box h3{font-size:11.5pt;color:var(--musgo);margin-bottom:6px}
+  .box ul{list-style:none}
+  .box li{padding-left:14px;position:relative;font-size:9pt;margin-bottom:3px}
+  .box li::before{content:"•";position:absolute;left:2px;color:var(--oliva);font-weight:800}
+  .combinado{margin-top:12px;background:var(--preto);color:var(--creme);border-radius:10px;padding:10px 14px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .combinado h3{color:var(--nude);font-size:11pt;margin-bottom:4px}
+  .combinado li{font-size:9pt;list-style:none;margin-bottom:2px}
+  .tarefa{margin-top:12px;border:2px solid var(--musgo);border-radius:12px;padding:10px 14px;background:var(--creme)}
+  .tarefa h3{font-size:13pt;color:var(--musgo);margin-bottom:6px}
+  .passo{display:grid;grid-template-columns:22px 1fr;gap:8px;margin-bottom:5px;align-items:start}
+  .passo > span{width:22px;height:22px;border-radius:50%;background:var(--musgo);color:var(--creme);font-weight:800;font-size:9pt;display:flex;align-items:center;justify-content:center}
+  .passo p{font-size:9.5pt}
+  .link{color:var(--oliva);font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- ============ PÁGINA 1 ============ -->
+<section class="pg">
+  <div class="capa">
+    <div class="capa-txt">
+      <span class="eyebrow">Mentoria Carreira Sem Trava</span>
+      <h1>Seja bem-vindo(a).<br><em>A partir de hoje</em> você não busca sozinho(a).</h1>
+      <p>Este guia mostra como vão ser os próximos 3 meses, o que esperar de mim, o que eu espero de você e qual é o seu primeiro passo.</p>
+    </div>
+    <img src="../pagina/assets/foto-bracos.jpg" alt="Isabela">
+  </div>
+
+  <div class="conteudo">
+    <div class="carta">
+      <span class="eyebrow">Uma carta para você</span>
+      <h2>Você não é incompetente. Você estava invisível.</h2>
+      <p>Recém-formada, eu mandava currículo para tudo e tinha a sensação de que ninguém nem abria. Fui reprovada em entrevistas sem entender por quê, e cheguei a pensar que o problema era eu.</p>
+      <p>Depois passei <strong>6 anos do outro lado da mesa, como recrutadora</strong>. Vi currículos bons sendo barrados pelo ATS antes de qualquer pessoa ler. Vi candidatos excelentes reprovados porque não sabiam contar os próprios resultados. E vi que, quando a vaga era urgente, eu nem divulgava: ia direto ao LinkedIn buscar alguém.</p>
+      <p>É isso que vamos mudar juntos. Nos próximos 3 meses você vai parar de correr atrás de vaga e passar a <strong>ser encontrado(a)</strong>. Eu te mostro o caminho, passo a passo, e fico do seu lado em cada etapa.</p>
+      <p class="assin">Isabela</p>
+    </div>
+
+    <div style="margin-top:12px">
+      <span class="eyebrow">O Método Carreira Sem Trava</span>
+      <h2 style="font-size:13pt">Os 4 pilares que vamos destravar</h2>
+      <div class="pilares">
+        <div class="pilar"><b>01</b><h3>Currículo Aprovado</h3><p>Currículo que passa no ATS e chega até um humano.</p></div>
+        <div class="pilar"><b>02</b><h3>LinkedIn Ímã</h3><p>Perfil que faz os recrutadores virem até você.</p></div>
+        <div class="pilar"><b>03</b><h3>Busca Estratégica</h3><p>Candidaturas com método, organização e constância.</p></div>
+        <div class="pilar"><b>04</b><h3>Entrevista Aprovada</h3><p>Respostas com resultados e confiança para dizê-las.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="rodape"><span>Mentoria Carreira Sem Trava · Guia de Boas-Vindas</span><span>1/2</span></div>
+</section>
+
+<!-- ============ PÁGINA 2 ============ -->
+<section class="pg">
+  <div class="topo2">
+    <span class="eyebrow">Sua jornada</span>
+    <h2>12 semanas, do "ignorado" ao "a vaga é sua"</h2>
+  </div>
+  <div class="conteudo" style="padding-top:6mm">
+    <table>
+      <tr><th>Quando</th><th>O que acontece</th><th>Seu marco</th></tr>
+      <tr><td>Semana 0</td><td>Diagnóstico + Checklist LinkedIn em 1 Hora</td><td>Primeiros ajustes em 48h</td></tr>
+      <tr><td>Semana 1</td><td><b>Sessão 1</b> · Diagnóstico + Currículo Aprovado</td><td>Currículo novo pronto</td></tr>
+      <tr><td>Semana 2</td><td><b>Sessão 2</b> · LinkedIn Ímã. Começa o Plano 30 dias de Visibilidade</td><td>Perfil novo no ar</td></tr>
+      <tr><td>Semanas 4–5</td><td><b>Sessão 3</b> · Busca Estratégica. Começa o Plano 30 dias de Candidaturas</td><td>Planilha rodando</td></tr>
+      <tr><td>Semanas 7–8</td><td><b>Sessão 4</b> · Entrevista Aprovada + simulação com feedback</td><td>Simulação aprovada</td></tr>
+      <tr><td>Semanas 11–12</td><td><b>Sessão 5</b> · Métricas + Proposta (negociação)</td><td>Plano de continuidade</td></tr>
+      <tr><td>A cada 15 dias</td><td>Check-in de métricas pelo WhatsApp</td><td>Ver seus números subindo</td></tr>
+    </table>
+
+    <div class="duas">
+      <div class="box">
+        <h3>Como funcionam as sessões</h3>
+        <ul>
+          <li>5 sessões individuais de 50 min, online</li>
+          <li>Antes de cada sessão: ler o Guia do Pilar e fazer a tarefa combinada</li>
+          <li>Sessões gravadas e enviadas para você rever</li>
+          <li>Pode remarcar 1 vez, com 24h de antecedência</li>
+          <li>Falta sem aviso não é reposta</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Como funciona o WhatsApp</h3>
+        <ul>
+          <li>Suporte durante os 3 meses de mentoria</li>
+          <li>Respondo em até 24h úteis, de segunda a sexta</li>
+          <li>Áudios de até 2 minutos; para textos longos, use o Docs</li>
+          <li>Mande prints e links: isso acelera minha resposta</li>
+          <li>Comemore aqui cada abordagem e cada entrevista 🎉</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="combinado">
+      <div>
+        <h3>O que você pode esperar de mim</h3>
+        <ul>
+          <li>✓ Um plano claro para cada semana</li>
+          <li>✓ Olhar de recrutadora sobre o seu caso</li>
+          <li>✓ Feedback sincero e respeitoso</li>
+          <li>✓ Presença nas vitórias e nos dias difíceis</li>
+        </ul>
+      </div>
+      <div>
+        <h3>O que eu espero de você</h3>
+        <ul>
+          <li>✓ Aplicar os planos de 30 dias com constância</li>
+          <li>✓ Manter a planilha atualizada</li>
+          <li>✓ Chegar às sessões com a tarefa feita</li>
+          <li>✓ Me contar quando travar, sem vergonha</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tarefa">
+      <h3>Seu primeiro passo (leva menos de 1h30)</h3>
+      <div class="passo"><span>1</span><p><b>Preencha o diagnóstico</b> (10 min): <span class="link">[link do formulário]</span></p></div>
+      <div class="passo"><span>2</span><p><b>Aplique o Checklist LinkedIn em 1 Hora</b>: <span class="link">[link do checklist]</span></p></div>
+      <div class="passo"><span>3</span><p><b>Agende sua Sessão 1</b>: <span class="link">[link da agenda]</span></p></div>
+      <div class="passo"><span>4</span><p><b>Abra sua planilha</b> e preencha a aba "Ponto A": <span class="link">[link da planilha]</span></p></div>
+    </div>
+  </div>
+  <div class="rodape"><span>Dúvidas? Me chame no WhatsApp.</span><span>2/2</span></div>
+</section>
+
+</body>
+</html>
