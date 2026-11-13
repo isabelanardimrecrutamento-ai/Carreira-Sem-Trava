@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mentoria Carreira Sem Trava</title>
+<meta name="description" content="Mentoria individual de recolocação com uma ex-recrutadora: currículo que passa no ATS, LinkedIn que atrai recrutadores e entrevista aprovada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --preto:#0e0e0c;
+    --preto-2:#171714;
+    --musgo:#4b5233;
+    --musgo-esc:#353a23;
+    --oliva:#7d8452;
+    --nude:#e6d5c0;
+    --nude-2:#d9c3a8;
+    --creme:#f6efe6;
+    --texto:#1d1c19;
+    --texto-suave:#5b574f;
+    --linha:rgba(29,28,25,.12);
+    --serif:"Playfair Display", Georgia, serif;
+    --sans:"Manrope", system-ui, -apple-system, sans-serif;
+    --raio:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--texto);background:var(--creme);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+  .estreito{max-width:760px}
+  section{padding:88px 0}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+  h2{font-size:clamp(30px,4.6vw,46px);margin-bottom:22px}
+  h3{font-size:22px;margin-bottom:8px}
+  p+p{margin-top:16px}
+  .eyebrow{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--oliva);margin-bottom:14px;display:block}
+  .centro{text-align:center}
+  .divisor{display:flex;align-items:center;gap:14px;justify-content:center;color:var(--oliva);margin:0 auto 18px}
+  .divisor::before,.divisor::after{content:"";height:1px;width:56px;background:currentColor;opacity:.7}
+
+  /* Botões */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--musgo);color:var(--creme);text-decoration:none;font-weight:800;font-size:16px;letter-spacing:.02em;padding:19px 34px;border-radius:999px;border:1px solid var(--oliva);box-shadow:0 10px 30px -10px rgba(75,82,51,.7);transition:transform .15s, background .15s;text-align:center}
+  .btn:hover{background:var(--musgo-esc);transform:translateY(-2px)}
+  .btn-nude{background:var(--nude);color:var(--preto);border-color:var(--nude-2);box-shadow:0 10px 30px -12px rgba(230,213,192,.5)}
+  .btn-nude:hover{background:var(--creme)}
+  .micro{font-size:13px;color:var(--texto-suave);margin-top:14px}
+
+  /* Escuro */
+  .escuro{background:var(--preto);color:var(--creme)}
+  .escuro .micro{color:rgba(246,239,230,.6)}
+  .musgo{background:var(--musgo-esc);color:var(--creme)}
+  .musgo .eyebrow,.escuro .eyebrow{color:var(--nude-2)}
+  .nude{background:var(--nude)}
+
+  /* HERO */
+  .hero{background:radial-gradient(90% 80% at 10% 0%, #262a1a 0%, var(--preto) 62%);color:var(--creme);padding:56px 0 0;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center}
+  .hero-txt{padding-bottom:80px}
+  .selo{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(230,213,192,.35);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--nude);margin-bottom:26px}
+  .selo i{width:8px;height:8px;border-radius:50%;background:#a3ad6a;box-shadow:0 0 0 4px rgba(163,173,106,.2)}
+  .hero h1{font-size:clamp(38px,6vw,66px);color:var(--creme);margin-bottom:22px}
+  .hero h1 em{font-style:italic;color:var(--nude)}
+  .hero .sub{font-size:clamp(17px,2vw,20px);color:rgba(246,239,230,.82);max-width:560px;margin-bottom:34px}
+  .hero-foto{position:relative;align-self:end;margin-right:-40px}
+  .hero-foto img{width:100%;aspect-ratio:4/5;max-height:720px;object-fit:cover;object-position:50% 100%;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 24%,#000 76%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 14%,#000 78%,transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent 0,#000 24%,#000 76%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 14%,#000 78%,transparent 100%);
+    mask-composite:intersect}
+  .hero-assinatura{position:absolute;left:0;right:0;bottom:28px;text-align:center;font-family:var(--serif);font-size:15px;color:var(--nude);letter-spacing:.04em}
+  .hero-provas{display:flex;flex-wrap:wrap;gap:22px 34px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(230,213,192,.18)}
+  .hero-provas div{font-size:14px;color:rgba(246,239,230,.7);line-height:1.35}
+  .hero-provas strong{display:block;font-family:var(--serif);font-size:28px;color:var(--creme);font-weight:600}
+
+  /* Bullets */
+  .lista-check{list-style:none;display:grid;gap:14px;margin:28px 0 36px}
+  .lista-check li{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--linha);border-radius:14px;padding:16px 18px;font-weight:500}
+  .lista-check li::before{content:"";flex:none;width:24px;height:24px;margin-top:1px;border-radius:50%;background:var(--musgo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f6efe6' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+
+  /* Problema */
+  .problema p{font-size:18px}
+  .destaque{font-family:var(--serif);font-size:clamp(22px,3vw,28px);line-height:1.35;color:var(--musgo);border-left:3px solid var(--oliva);padding-left:20px;margin:32px 0}
+  .travas{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:36px 0}
+  .trava{background:#fff;border:1px solid var(--linha);border-radius:var(--raio);padding:22px}
+  .trava b{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#9a5b45;margin-bottom:6px}
+  .nao-culpa{background:var(--preto);color:var(--creme);border-radius:var(--raio);padding:30px;text-align:center;font-family:var(--serif);font-size:clamp(22px,3vw,30px);margin-top:36px}
+  .nao-culpa span{color:var(--nude)}
+
+  /* Solução / pilares */
+  .pilares{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+  .pilar{background:rgba(246,239,230,.06);border:1px solid rgba(230,213,192,.18);border-radius:var(--raio);padding:26px 22px}
+  .pilar .n{font-family:var(--serif);font-size:44px;color:var(--oliva);line-height:1;margin-bottom:14px;display:block}
+  .pilar h3{color:var(--creme);font-size:21px}
+  .pilar p{font-size:15px;color:rgba(246,239,230,.75)}
+  .pilar .de{font-size:13px;color:var(--nude-2);margin-top:14px;padding-top:12px;border-top:1px dashed rgba(230,213,192,.25)}
+
+  /* Inbox */
+  .inbox{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:40px}
+  .msg{background:#fff;border:1px solid var(--linha);border-radius:16px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+  .avatar{flex:none;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--nude),var(--nude-2));filter:blur(.4px);position:relative}
+  .avatar::after{content:"in";position:absolute;right:-4px;bottom:-4px;width:18px;height:18px;border-radius:4px;background:#0a66c2;color:#fff;font:800 11px/18px var(--sans);text-align:center}
+  .msg small{display:block;font-size:12px;color:var(--texto-suave);font-weight:600;letter-spacing:.03em}
+  .msg p{font-size:15px;margin-top:4px;line-height:1.45}
+  .nota{font-size:13px;color:var(--texto-suave);margin-top:18px;text-align:center}
+
+  /* Para quem */
+  .duas{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+  .card{background:#fff;border:1px solid var(--linha);border-radius:var(--raio);padding:30px}
+  .card h3{margin-bottom:16px}
+  .card ul{list-style:none;display:grid;gap:12px}
+  .card li{padding-left:30px;position:relative}
+  .sim li::before{content:"✓";position:absolute;left:0;color:var(--musgo);font-weight:800}
+  .nao{background:transparent}
+  .nao li::before{content:"✕";position:absolute;left:0;color:#9a5b45;font-weight:800}
+
+  /* Quem fez */
+  .quem{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .quem img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%}
+  .creds{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+  .cred{border:1px solid rgba(230,213,192,.22);border-radius:14px;padding:18px}
+  .cred strong{display:block;font-family:var(--serif);font-size:30px;color:var(--nude);line-height:1.1;margin-bottom:4px}
+  .cred span{font-size:14px;color:rgba(246,239,230,.75)}
+
+  /* Cronograma */
+  .timeline{position:relative;margin-top:44px;display:grid;gap:18px}
+  .etapa{display:grid;grid-template-columns:120px 1fr;gap:22px;background:#fff;border:1px solid var(--linha);border-radius:var(--raio);padding:24px}
+  .etapa .quando{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--oliva)}
+  .etapa .quando b{display:block;font-family:var(--serif);font-size:34px;color:var(--musgo);letter-spacing:0;text-transform:none;line-height:1.1}
+  .etapa .marco{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;background:var(--creme);border:1px solid var(--linha);border-radius:999px;padding:5px 12px;color:var(--musgo)}
+  .ferramentas{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+  .ferr{background:var(--creme);border-radius:14px;padding:18px;font-weight:600;font-size:15px;border:1px solid var(--linha)}
+  .ferr span{display:block;font-size:13px;font-weight:500;color:var(--texto-suave);margin-top:4px}
+
+  /* Depoimentos */
+  .depos{columns:2;column-gap:20px;margin-top:40px}
+  .depo{break-inside:avoid;margin-bottom:20px;background:#fff;border-radius:var(--raio);overflow:hidden;border:1px solid var(--linha)}
+  .depo img{width:100%}
+  .depo p{padding:16px 20px 20px;font-family:var(--serif);font-size:19px;color:var(--musgo);line-height:1.35}
+
+  /* Oferta */
+  .oferta-box{background:var(--creme);color:var(--texto);border-radius:28px;padding:44px;max-width:820px;margin:0 auto;box-shadow:0 30px 80px -40px rgba(0,0,0,.6)}
+  .bonus{display:grid;gap:14px;margin:26px 0}
+  .bonus-item{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:#fff;border:1px dashed var(--oliva);border-radius:16px;padding:18px 20px}
+  .bonus-item .tag{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:var(--musgo);color:var(--creme);border-radius:8px;padding:6px 10px;white-space:nowrap}
+  .bonus-item h3{font-size:19px;margin:0}
+  .bonus-item p{font-size:14px;color:var(--texto-suave);line-height:1.45}
+  .bonus-item .val{text-align:right;font-size:13px;white-space:nowrap}
+  .bonus-item .val s{color:var(--texto-suave)}
+  .bonus-item .val b{display:block;color:var(--musgo)}
+  .extrato{width:100%;border-collapse:collapse;margin:22px 0;font-size:16px}
+  .extrato td{padding:12px 0;border-bottom:1px solid var(--linha)}
+  .extrato td:last-child{text-align:right;white-space:nowrap;color:var(--texto-suave)}
+  .extrato tr.total td{border-bottom:none;padding-top:18px;font-weight:800;color:var(--texto);font-size:18px}
+  .extrato tr.total td:last-child{text-decoration:line-through;color:var(--texto-suave)}
+  .preco{text-align:center;padding:30px 0 6px;border-top:2px solid var(--texto)}
+  .preco .de{font-size:15px;color:var(--texto-suave)}
+  .preco .por{font-family:var(--serif);font-size:clamp(46px,8vw,68px);color:var(--musgo);line-height:1.05;margin:6px 0}
+  .preco .parc{font-size:16px;font-weight:600;margin-bottom:24px}
+  .vagas{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#9a5b45;background:#f3e3da;border-radius:999px;padding:6px 14px;margin-bottom:14px}
+  .seguro{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;font-size:13px;color:var(--texto-suave);margin-top:16px}
+
+  /* Garantia */
+  .garantia{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;max-width:860px;margin:0 auto}
+  .selo-g{width:150px;height:150px;border-radius:50%;border:2px solid var(--musgo);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:var(--serif);color:var(--musgo);background:var(--creme);box-shadow:inset 0 0 0 8px var(--nude)}
+  .selo-g b{font-size:44px;line-height:1}
+  .selo-g span{font-size:13px;font-family:var(--sans);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+  .g-extra{margin-top:18px;background:#fff;border-left:3px solid var(--musgo);padding:16px 18px;border-radius:0 12px 12px 0;font-size:16px}
+
+  /* Passos */
+  .passos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+  .passo{border:1px solid rgba(230,213,192,.2);border-radius:var(--raio);padding:26px}
+  .passo .n{width:38px;height:38px;border-radius:50%;background:var(--nude);color:var(--preto);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:16px}
+  .passo p{font-size:15px;color:rgba(246,239,230,.75)}
+  .passo h3{color:var(--creme);font-size:20px}
+
+  /* FAQ */
+  .faq{margin-top:32px;display:grid;gap:12px}
+  .faq details{background:#fff;border:1px solid var(--linha);border-radius:14px;padding:4px 22px}
+  .faq summary{cursor:pointer;list-style:none;font-weight:700;padding:18px 30px 18px 0;position:relative}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";position:absolute;right:0;top:12px;font-size:26px;font-weight:400;color:var(--oliva);transition:transform .2s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details p{padding-bottom:20px;color:var(--texto-suave)}
+
+  /* Final */
+  .final{text-align:center}
+  .final h2{color:var(--creme)}
+  footer{background:var(--preto);color:rgba(246,239,230,.55);font-size:13px;text-align:center;padding:40px 20px 110px;border-top:1px solid rgba(230,213,192,.1)}
+  footer strong{color:var(--nude);font-family:var(--serif);font-size:20px;font-weight:600;display:block;margin-bottom:8px}
+  .whats{position:fixed;right:18px;bottom:18px;z-index:10;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:13px 18px;border-radius:999px;box-shadow:0 12px 30px -10px rgba(0,0,0,.5)}
+  .whats svg{width:20px;height:20px}
+
+  /* Responsivo */
+  @media (max-width:900px){
+    section{padding:68px 0}
+    .hero-grid{grid-template-columns:1fr}
+    .hero{padding-top:24px}
+    .hero-txt{padding-bottom:56px;order:2;position:relative;z-index:1}
+    .hero-foto{order:1;width:100%;max-width:340px;margin:0 auto -70px;align-self:center}
+    .hero-foto img{max-height:440px;aspect-ratio:auto;object-position:top}
+    .hero-assinatura{display:none}
+    .hero-provas{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .hero-provas div{font-size:12px}
+    .hero-provas strong{font-size:22px}
+    .pilares{grid-template-columns:1fr 1fr}
+    .quem{grid-template-columns:1fr;gap:32px}
+    .quem img{max-width:420px;margin:0 auto}
+    .passos{grid-template-columns:1fr}
+    .ferramentas{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:640px){
+    body{font-size:16px}
+    .wrap{padding:0 16px}
+    .travas,.inbox,.duas,.pilares,.creds,.ferramentas{grid-template-columns:1fr}
+    .depos{columns:1}
+    .etapa{grid-template-columns:1fr;gap:6px}
+    .oferta-box{padding:28px 20px;border-radius:22px}
+    .bonus-item{grid-template-columns:1fr;gap:8px}
+    .bonus-item .tag{justify-self:start}
+    .bonus-item .val{text-align:left}
+    .garantia{grid-template-columns:1fr;justify-items:center;text-align:center}
+    .g-extra{text-align:left}
+    .btn{width:100%;padding:18px 20px}
+    .whats span{display:none}
+    .whats{padding:14px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ SEÇÃO 1-2 · HERO ============ -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <div class="selo"><i></i> Turma Fundadora · apenas 10 vagas</div>
+      <h1>Pare de mandar currículo no escuro. <em>Seja encontrado</em> pelos recrutadores.</h1>
+      <p class="sub">A mentoria individual criada por quem passou 6 anos do outro lado da mesa: currículo que passa no ATS, LinkedIn que atrai recrutadores e entrevista em que você finalmente mostra o seu valor.</p>
+      <a class="btn btn-nude" href="#oferta">Quero sair da Busca Invisível</a>
+      <div class="hero-provas">
+        <div><strong>6 anos</strong>como recrutadora</div>
+        <div><strong>12 dias</strong>recolocação mais rápida de uma mentorada</div>
+        <div><strong>1:1</strong>mentoria 100% individual</div>
+      </div>
+    </div>
+    <div class="hero-foto">
+      <img src="assets/foto-bracos.jpg" alt="Isabela, mentora do método Carreira Sem Trava">
+      <div class="hero-assinatura">Isabela · Método Carreira Sem Trava</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ SEÇÃO 4-5 · O QUE VOCÊ RECEBE ============ -->
+<section>
+  <div class="wrap estreito">
+    <span class="eyebrow">Mentoria Carreira Sem Trava</span>
+    <h2>Em 3 meses de mentoria individual, você recebe:</h2>
+    <ul class="lista-check">
+      <li>5 sessões individuais comigo (50 min cada), focadas no seu caso</li>
+      <li>Currículo estruturado para passar pelos filtros de IA (ATS)</li>
+      <li>LinkedIn reestruturado para atrair recrutadores até você</li>
+      <li>Plano de 30 dias de Visibilidade + Plano de 30 dias de Candidaturas Estratégicas</li>
+      <li>Simulação de entrevista com feedback e roteiro de respostas</li>
+      <li>Acesso direto ao meu WhatsApp por 3 meses para tirar dúvidas</li>
+      <li>E bônus que preparei para a Turma Fundadora</li>
+    </ul>
+    <div class="centro"><a class="btn" href="#oferta">Quero conhecer a mentoria</a></div>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 6 · PROBLEMA ============ -->
+<section class="nude problema">
+  <div class="wrap estreito">
+    <span class="eyebrow">Talvez você se reconheça aqui</span>
+    <h2>Você manda currículo para tudo quanto é vaga… e ninguém responde.</h2>
+    <p>Todo dia é a mesma coisa: abre o LinkedIn, procura vaga, clica em "candidatar", manda mais um currículo. Dez, vinte, cinquenta. E o retorno não vem.</p>
+    <p>Quando finalmente te chamam para uma entrevista, você sai achando que foi bem… e recebe silêncio. Ou um "seguimos com outro candidato". Sem saber o que errou.</p>
+    <p class="destaque">"Será que o problema sou eu?"</p>
+    <p>Oi, meu nome é <strong>Isabela</strong>, e eu já fiz essa mesma pergunta. Recém-formada e desempregada, eu mandava currículo para tudo e tinha a sensação de que ninguém nem abria. Fui reprovada em entrevistas sem entender por quê.</p>
+    <p>Até que fui parar do outro lado da mesa: passei <strong>6 anos como recrutadora</strong>. Vi de perto como os candidatos são filtrados e descobri que, quando a vaga era urgente, eu nem divulgava: ia direto ao LinkedIn buscar o candidato. E posso te garantir: <strong>muita gente boa é descartada antes de qualquer pessoa ler o currículo.</strong></p>
+    <p>Não é falta de competência. É que você está preso na <strong>Busca Invisível</strong>:</p>
+    <div class="travas">
+      <div class="trava"><b>Trava 1</b>Seu currículo não passa no filtro do ATS, então nenhum recrutador chega a vê-lo.</div>
+      <div class="trava"><b>Trava 2</b>Seu LinkedIn está parado, enquanto os recrutadores procuram candidatos justamente lá.</div>
+      <div class="trava"><b>Trava 3</b>Você se candidata no "modo metralhadora", sem estratégia, sem organização e sem constância.</div>
+      <div class="trava"><b>Trava 4</b>Na entrevista você fala de tarefas, não de resultados, e parece só mais um candidato.</div>
+    </div>
+    <p>E quanto mais tempo passa, pior fica: a conta aperta, a autoestima cai e você começa a duvidar de si mesmo. Você sente que já tentou de tudo, mas na verdade tentou <em>sempre do mesmo jeito</em>.</p>
+    <div class="nao-culpa">Se isso acontece com você, <span>não é culpa sua.</span><br>Ninguém te mostrou como o processo funciona do lado de quem contrata.</div>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 7 · SOLUÇÃO ============ -->
+<section class="musgo">
+  <div class="wrap">
+    <div class="estreito" style="margin:0 auto;text-align:center">
+      <span class="eyebrow">A solução</span>
+      <h2>Inverta o jogo: pare de correr atrás de vaga e passe a ser encontrado.</h2>
+      <p style="color:rgba(246,239,230,.8)">Diferente de quem manda você "aplicar em tudo" ou de cursos teóricos e motivacionais, o <strong>Método Carreira Sem Trava</strong> foi construído com a visão de quem contrata. Ele ataca as 4 travas da Busca Invisível, uma por uma:</p>
+    </div>
+    <div class="pilares">
+      <div class="pilar"><span class="n">01</span><h3>Currículo Aprovado</h3><p>Currículo otimizado para o ATS e adaptado às suas vagas-alvo.</p><div class="de">Resultado: passa no filtro e chega a um humano</div></div>
+      <div class="pilar"><span class="n">02</span><h3>LinkedIn Ímã</h3><p>Perfil e rede posicionados para o algoritmo te mostrar aos recrutadores.</p><div class="de">Resultado: recrutadores vêm até você</div></div>
+      <div class="pilar"><span class="n">03</span><h3>Busca Estratégica</h3><p>Rotina organizada de candidaturas, indicações e contato direto com recrutadores.</p><div class="de">Resultado: volume certo, com método</div></div>
+      <div class="pilar"><span class="n">04</span><h3>Entrevista Aprovada</h3><p>Respostas estruturadas com os seus resultados e confiança para dizê-las.</p><div class="de">Resultado: você sai com a vaga encaminhada</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROVA PESSOAL · LINKEDIN ÍMÃ ============ -->
+<section>
+  <div class="wrap">
+    <div class="estreito centro" style="margin:0 auto">
+      <span class="eyebrow">Eu aplico o que ensino</span>
+      <h2>É assim que fica a caixa de entrada quando o LinkedIn trabalha por você</h2>
+      <p>Algumas das abordagens de recrutadores que eu mesma recebi, <strong>sem me candidatar a nada</strong>, só usando a rede do jeito certo:</p>
+    </div>
+    <div class="inbox">
+      <div class="msg"><div class="avatar"></div><div><small>Recrutamento Executivo · multinacional líder global em RH</small><p>"Estou recrutando um profissional na posição de Recruiter Sênior para uma empresa líder global…"</p></div></div>
+      <div class="msg"><div class="avatar"></div><div><small>Talent Acquisition · multinacional de tecnologia</small><p>"We currently have a great job opportunity… Senior Talent Acquisition Specialist to join our Global Team."</p></div></div>
+      <div class="msg"><div class="avatar"></div><div><small>RH · grande rede varejista</small><p>"Estamos com uma oportunidade para atuar como Coordenadora de RH. Tem interesse em saber mais?"</p></div></div>
+      <div class="msg"><div class="avatar"></div><div><small>CEO · empresa de recrutamento</small><p>"Tenho algumas oportunidades abertas. Gostaria de saber se tem interesse em marcarmos uma conversa?"</p></div></div>
+      <div class="msg"><div class="avatar"></div><div><small>Consultoria de recrutamento estratégico</small><p>"Identifiquei seu perfil aqui pelo LinkedIn e gostaria de conversar contigo…"</p></div></div>
+      <div class="msg"><div class="avatar"></div><div><small>Edtech internacional</small><p>"We found your profile interesting for this role… If you feel interested please apply."</p></div></div>
+    </div>
+    <p class="nota">Nomes e empresas omitidos por respeito aos profissionais.</p>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 8 · PARA QUEM É ============ -->
+<section class="nude">
+  <div class="wrap">
+    <div class="centro"><span class="eyebrow">Para quem é</span><h2>A mentoria foi criada para você que:</h2></div>
+    <div class="duas">
+      <div class="card sim">
+        <h3>É para você se…</h3>
+        <ul>
+          <li>Manda muitos currículos e não tem retorno</li>
+          <li>Chega na entrevista e é reprovado sem entender por quê</li>
+          <li>Está empregado, mas quer crescer ou sair de um trabalho que não te satisfaz</li>
+          <li>Quer mudar de área e não tem exatamente a experiência que a vaga pede</li>
+          <li>Tem LinkedIn, mas ele não te traz nenhuma oportunidade</li>
+          <li>Está disposto a aplicar um plano com constância por 3 meses</li>
+        </ul>
+      </div>
+      <div class="card nao">
+        <h3>Não é para você se…</h3>
+        <ul>
+          <li>Procura alguém que "indique" seu currículo para empresas</li>
+          <li>Quer uma fórmula mágica sem colocar a mão na massa</li>
+          <li>Não tem disponibilidade para aplicar as tarefas entre as sessões</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 9 · QUEM FEZ ============ -->
+<section class="escuro">
+  <div class="wrap quem">
+    <img src="assets/foto-notebook.jpg" alt="Isabela trabalhando no notebook">
+    <div>
+      <span class="eyebrow">Quem vai te acompanhar</span>
+      <h2>Isabela, ex-recrutadora e criadora do Método Carreira Sem Trava</h2>
+      <p style="color:rgba(246,239,230,.8)">Eu sei exatamente o que acontece com o seu currículo depois que você clica em "candidatar", porque por 6 anos eu era a pessoa do outro lado. Hoje uso esse conhecimento para ajudar profissionais a serem encontrados, chamados e aprovados.</p>
+      <div class="creds">
+        <div class="cred"><strong>6 anos</strong><span>atuando como recrutadora</span></div>
+        <div class="cred"><strong>8k+</strong><span>seguidores no LinkedIn</span></div>
+        <div class="cred"><strong>Abordada</strong><span>por recrutadores de multinacionais sem me candidatar</span></div>
+        <div class="cred"><strong>12 dias</strong><span>recolocação mais rápida de uma mentorada</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 10 · O PRODUTO ============ -->
+<section>
+  <div class="wrap estreito">
+    <span class="eyebrow">Como funciona</span>
+    <h2>Sua jornada em 12 semanas, do "ignorado" ao "a vaga é sua"</h2>
+    <p>São 5 sessões individuais de 50 minutos, online, e entre elas você aplica um plano claro, com meu suporte no WhatsApp.</p>
+    <div class="timeline">
+      <div class="etapa"><div class="quando">Semana<b>1</b></div><div><h3>Diagnóstico + Currículo Aprovado</h3><p>Definimos seu posicionamento e suas vagas-alvo e reestruturamos seu currículo para passar no ATS.</p><span class="marco">✓ Currículo novo pronto</span></div></div>
+      <div class="etapa"><div class="quando">Semana<b>2</b></div><div><h3>LinkedIn Ímã</h3><p>Reestruturamos seu perfil e você entende como o algoritmo decide quem aparece para os recrutadores.</p><span class="marco">✓ Perfil novo no ar + início do Plano de Visibilidade</span></div></div>
+      <div class="etapa"><div class="quando">Semana<b>4–5</b></div><div><h3>Busca Estratégica</h3><p>Candidaturas com método: quais vagas, quantas e como acionar indicações e recrutadores.</p><span class="marco">✓ Plano de Candidaturas rodando</span></div></div>
+      <div class="etapa"><div class="quando">Semana<b>7–8</b></div><div><h3>Entrevista Aprovada</h3><p>Roteiro de respostas com os seus resultados e simulação de entrevista com feedback detalhado.</p><span class="marco">✓ Simulação aprovada</span></div></div>
+      <div class="etapa"><div class="quando">Semana<b>11–12</b></div><div><h3>Métricas + Proposta</h3><p>Analisamos seus números, ajustamos a rota e te preparo para negociar a proposta.</p><span class="marco">✓ Plano de continuidade</span></div></div>
+    </div>
+    <h3 style="margin-top:44px">Além disso, você recebe ferramentas prontas:</h3>
+    <div class="ferramentas">
+      <div class="ferr">Checklist LinkedIn em 1 Hora<span>Primeiros ajustes já nas primeiras 48h</span></div>
+      <div class="ferr">Plano 30 dias de Visibilidade<span>O que fazer em cada dia</span></div>
+      <div class="ferr">Plano 30 dias de Candidaturas<span>Busca organizada e constante</span></div>
+      <div class="ferr">Check-in a cada 15 dias<span>Acompanhamento das suas métricas</span></div>
+      <div class="ferr">Suporte no WhatsApp<span>Durante os 3 meses</span></div>
+      <div class="ferr">Roteiro de entrevista<span>As perguntas mais comuns com estrutura de resposta</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 11 · DEPOIMENTOS ============ -->
+<section class="nude">
+  <div class="wrap">
+    <div class="centro"><span class="eyebrow">Quem já passou pela mentoria</span><h2>Do "ignorado" ao "a vaga é sua"</h2></div>
+    <div class="depos">
+      <div class="depo"><img src="assets/depo-12dias.jpg" alt="Depoimento: recolocação em 12 dias"><p>"Em apenas 12 dias consegui uma recolocação!"</p></div>
+      <div class="depo"><img src="assets/depo-2propostas.jpg" alt="Depoimento: 2 propostas"><p>"Já recebi 2 propostas e estou na fase final de outra… agora o problema é escolher."</p></div>
+      <div class="depo"><img src="assets/depo-linkedin.jpg" alt="Depoimento: oportunidades vieram pelo LinkedIn"><p>"As oportunidades vieram pelo LinkedIn. Era isso que faltava pra eu conseguir um emprego."</p></div>
+      <div class="depo"><img src="assets/depo-passei.jpg" alt="Depoimento: RH chamou para entrevista e foi aprovado"><p>"A pessoa do RH me mandou mensagem… ontem mesmo ela disse que eu passei."</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEÇÕES 12-16 · OFERTA → BÔNUS → RECAP → CTA → GARANTIA ============ -->
+<section class="escuro" id="oferta">
+  <div class="wrap">
+    <div class="centro estreito" style="margin:0 auto 44px">
+      <span class="eyebrow">Turma Fundadora</span>
+      <h2>Tudo o que você precisa para sair da Busca Invisível, num acompanhamento individual</h2>
+      <p style="color:rgba(246,239,230,.8)">São 3 meses comigo, olhando para o seu currículo, o seu LinkedIn, as suas candidaturas e as suas entrevistas, com um plano claro do primeiro ao último dia.</p>
+    </div>
+
+    <div class="oferta-box">
+      <h3 style="font-size:26px">E ainda preparei bônus para a Turma Fundadora:</h3>
+      <div class="bonus">
+        <div class="bonus-item"><span class="tag">Bônus 1</span><div><h3>Templates de mensagens</h3><p>Mensagens prontas para abordar recrutadores e ter seus pedidos de conexão aceitos.</p></div><div class="val"><s>R$ 197</s><b>Grátis</b></div></div>
+        <div class="bonus-item"><span class="tag">Bônus 2</span><div><h3>Planilha de candidaturas e métricas</h3><p>Acompanhe cada candidatura e veja seus números evoluírem semana a semana.</p></div><div class="val"><s>R$ 97</s><b>Grátis</b></div></div>
+        <div class="bonus-item"><span class="tag">Bônus 3</span><div><h3>Roteiro de entrevista</h3><p>As perguntas que mais aparecem e como estruturar respostas que mostram resultado.</p></div><div class="val"><s>R$ 197</s><b>Grátis</b></div></div>
+        <div class="bonus-item"><span class="tag">Fundadora</span><div><h3>Currículo adaptado para 3 vagas-alvo</h3><p>Exclusivo da Turma Fundadora: eu reviso seu currículo para até 3 vagas específicas.</p></div><div class="val"><s>R$ 297</s><b>Grátis</b></div></div>
+      </div>
+
+      <h3 style="font-size:22px;margin-top:34px">Recapitulando tudo o que você recebe:</h3>
+      <table class="extrato">
+        <tr><td>5 sessões individuais de mentoria (50 min)</td><td>R$ 2.000</td></tr>
+        <tr><td>Estruturação de currículo para ATS</td><td>R$ 497</td></tr>
+        <tr><td>Estruturação completa do LinkedIn</td><td>R$ 697</td></tr>
+        <tr><td>Simulação de entrevista + feedback</td><td>R$ 397</td></tr>
+        <tr><td>Plano 30 dias de Visibilidade</td><td>R$ 297</td></tr>
+        <tr><td>Plano 30 dias de Candidaturas</td><td>R$ 297</td></tr>
+        <tr><td>Suporte no WhatsApp por 3 meses</td><td>R$ 600</td></tr>
+        <tr><td>Bônus 1, 2 e 3</td><td>R$ 491</td></tr>
+        <tr><td>Bônus Fundadora: currículo para 3 vagas-alvo</td><td>R$ 297</td></tr>
+        <tr class="total"><td>Valor total</td><td>R$ 5.573</td></tr>
+      </table>
+      <p style="color:var(--texto-suave)">Quanto custa mais um mês parado, ou mais um mês num trabalho que você não aguenta? Para a Turma Fundadora, o investimento é bem menor:</p>
+
+      <div class="preco">
+        <span class="vagas">Apenas 10 vagas</span>
+        <div class="de">de <s>R$ 1.997</s> por</div>
+        <div class="por">R$ 1.497</div>
+        <div class="parc">à vista ou em até 12x no cartão</div>
+        <a class="btn" href="#aplicar">Quero aplicar para a Turma Fundadora</a>
+        <div class="seguro"><span>🔒 Pagamento seguro</span><span>💳 Cartão, Pix ou boleto</span><span>🗓️ Vagas preenchidas por ordem de aplicação</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="garantia wrap">
+    <div class="selo-g"><b>7</b><span>dias de<br>garantia</span></div>
+    <div>
+      <span class="eyebrow">Risco zero para você</span>
+      <h2 style="font-size:clamp(28px,4vw,38px)">Garantia dupla Carreira Sem Trava</h2>
+      <p><strong>7 dias de garantia incondicional:</strong> se nos primeiros 7 dias você sentir que a mentoria não é para você, devolvo 100% do valor, sem perguntas.</p>
+      <div class="g-extra"><strong>+ Garantia de acompanhamento:</strong> se você aplicar os dois planos de 30 dias, com a planilha preenchida, e mesmo assim não receber nenhuma abordagem de recrutador nem convite para entrevista, <strong>eu continuo te acompanhando por mais 1 mês, sem custo.</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA A APLICAÇÃO ============ -->
+<section class="musgo" id="aplicar">
+  <div class="wrap">
+    <div class="centro"><span class="eyebrow">Próximos passos</span><h2>Como garantir sua vaga</h2></div>
+    <div class="passos">
+      <div class="passo"><div class="n">1</div><h3>Preencha a aplicação</h3><p>Leva 3 minutos. Quero entender seu momento, sua área e o que mais te trava hoje.</p></div>
+      <div class="passo"><div class="n">2</div><h3>Conversa comigo</h3><p>Em até 48h te chamo para uma conversa de 20 minutos e vemos juntos se a mentoria faz sentido para você.</p></div>
+      <div class="passo"><div class="n">3</div><h3>Comece a mentoria</h3><p>Fazendo sentido, você garante sua vaga e em 48h já recebe o Checklist LinkedIn em 1 Hora.</p></div>
+    </div>
+    <div class="centro" style="margin-top:40px">
+      <!-- TROQUE o href abaixo pelo link do seu formulário ou WhatsApp -->
+      <a class="btn btn-nude" href="#aplicar">Preencher minha aplicação</a>
+      <p class="micro" style="color:rgba(246,239,230,.6)">Turma Fundadora · 10 vagas · R$ 1.497 ou em até 12x</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 17 · FAQ ============ -->
+<section class="nude">
+  <div class="wrap estreito">
+    <div class="centro"><span class="eyebrow">Dúvidas frequentes</span><h2>Perguntas frequentes</h2></div>
+    <div class="faq">
+      <details><summary>Funciona para a minha área?</summary><p>Sim. O processo de recrutamento (ATS, LinkedIn e entrevista) é muito parecido em todas as áreas. Nas sessões adaptamos tudo para o seu cargo, área e senioridade, inclusive para cargos de liderança.</p></details>
+      <details><summary>Não tenho exatamente a experiência que as vagas pedem. Serve para mim?</summary><p>Serve. Uma parte importante da mentoria é traduzir as suas experiências e resultados para a linguagem da vaga que você quer, inclusive se estiver mudando de área.</p></details>
+      <details><summary>Você indica meu currículo para empresas?</summary><p>Não, e de propósito. Indicação resolve uma vaga. O que eu te ensino resolve a sua carreira: quando você aprende a ser encontrado, os recrutadores vêm até você nesta busca e em todas as próximas.</p></details>
+      <details><summary>Estou desempregado. Consigo parcelar?</summary><p>Sim, em até 12x no cartão. Na conversa olhamos juntos qual é a melhor forma para o seu momento.</p></details>
+      <details><summary>Em quanto tempo vou ter resultado?</summary><p>Os primeiros sinais, como mais visualizações de perfil e recrutadores olhando seu LinkedIn, costumam aparecer nas primeiras semanas de aplicação do plano. O tempo até a contratação varia com a área, a senioridade e a sua dedicação. Por isso acompanhamos suas métricas a cada 15 dias.</p></details>
+      <details><summary>Como são as sessões?</summary><p>São 5 sessões individuais e online, de 50 minutos, ao longo de 3 meses. Entre elas você tem meu WhatsApp para tirar dúvidas.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia incondicional e, além disso, a garantia de acompanhamento: aplicou os planos e não recebeu nenhuma abordagem nem convite? Eu sigo com você por mais 1 mês, sem custo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÚLTIMO CTA ============ -->
+<section class="escuro final">
+  <div class="wrap estreito">
+    <span class="divisor">Carreira Sem Trava</span>
+    <h2>Seu próximo emprego pode começar com um recrutador te chamando.</h2>
+    <p style="color:rgba(246,239,230,.8);margin-bottom:32px">Pare de correr atrás de vaga. As 10 vagas da Turma Fundadora são preenchidas por ordem de aplicação.</p>
+    <a class="btn btn-nude" href="#aplicar">Quero aplicar para a Turma Fundadora</a>
+    <p class="micro">🔒 7 dias de garantia incondicional + garantia de acompanhamento</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Carreira Sem Trava</strong>
+  Dúvidas? Fale comigo no WhatsApp.<br>
+  © 2026 Isabela · Mentoria Carreira Sem Trava. Os resultados variam de pessoa para pessoa e dependem da aplicação do método.
+</footer>
+
+<!-- TROQUE 55DDDNUMERO pelo seu WhatsApp -->
+<a class="whats" href="https://wa.me/55DDDNUMERO?text=Oi%20Isabela!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20mentoria%20Carreira%20Sem%20Trava" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>
+  <span>Tirar dúvida</span>
+</a>
+
+</body>
+</html>
