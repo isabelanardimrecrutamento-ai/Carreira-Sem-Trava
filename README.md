@@ -12,4 +12,5 @@ Material do Funnel Squad para a Mentoria Carreira Sem Trava.
 | 06-pagina-de-vendas.md | Decisões e pendências da página |
 | 07-genesis.md | Bio, destaques, posts fixados, LinkedIn |
 | 08-criativos.md | 10 criativos em 3 rodadas |
+| 09-escada.md | Escada de produtos (entrada, alicerce, acompanhamento) |
 | pagina/ | Página de vendas (index.html + fotos) |
