@@ -15,4 +15,5 @@ Material do Funnel Squad para a Mentoria Carreira Sem Trava.
 | 09-escada.md | Escada de produtos (entrada, alicerce, acompanhamento) |
 | 10-estrutura-mentoria.md | Estrutura da mentoria: Ponto A/B, jornada, onboarding, guias |
 | materiais/ | Materiais da mentoria: Guia de Boas-Vindas (PDF + HTML) e Planilha de Candidaturas e Métricas (.xlsx) |
+| conteudo/ | Conteúdos prontos (carrosséis com slides em PNG, legendas e posts para o LinkedIn) |
 | pagina/ | Página de vendas (index.html + fotos) |
