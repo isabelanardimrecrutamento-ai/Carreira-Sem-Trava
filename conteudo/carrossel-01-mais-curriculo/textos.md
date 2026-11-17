@@ -14,11 +14,11 @@
 | 1 | Hook | **Mandar mais currículo *não* aumenta suas chances.** O que eu via como recrutadora (e quase ninguém te conta). |
 | 2 | Identificação | Eu sei. Todo mundo fala: *"manda pra tudo, uma hora dá certo."* Fui recrutadora por 6 anos. Deixa eu te mostrar o que acontece com o seu currículo depois que você clica em "candidatar". |
 | 3 | Conteúdo 01 | Uma vaga recebe *centenas* de currículos. E antes de qualquer pessoa ler, um sistema chamado ATS filtra a maioria. |
-| 4 | Conteúdo 02 | O ATS procura as *palavras-chave* da vaga. Currículo genérico, igual para todas as vagas? Descartado em segundos. **100 currículos barrados no filtro valem zero.** |
+| 4 | Conteúdo 02 | O ATS procura as *palavras-chave* da vaga. Currículo genérico, sem as palavras-chave do cargo que você busca? Descartado em segundos. **100 currículos barrados no filtro valem zero.** |
 | 5 | Conteúdo 03 | E tem mais: quando a vaga era urgente, *eu nem divulgava.* Abria o LinkedIn, digitava o cargo e as palavras-chave… e chamava quem aparecia. |
 | 6 | Virada | Ou seja: muita vaga é preenchida por quem é *encontrado*, não por quem manda mais currículo. |
-| 7 | Conteúdo 04 | O que muda na prática: **Quem é ignorado:** 50 currículos iguais por semana, para qualquer vaga · **Quem é chamado:** 10 vagas-alvo, com o currículo adaptado a cada uma |
-| 8 | Conteúdo 05 | E deixa o LinkedIn *trabalhar por você:* Título com o cargo que você quer + 2 especialidades · Sobre com as palavras-chave das suas vagas-alvo · Experiências com resultados, não tarefas |
+| 7 | Conteúdo 04 | O que muda na prática: **Quem é ignorado:** 50 currículos por semana, para qualquer vaga · **Quem é chamado:** foco em 1 cargo-alvo, com um currículo pensado para ele |
+| 8 | Conteúdo 05 | E deixa o LinkedIn *trabalhar por você:* Título com o cargo que você quer + 2 especialidades · Sobre com as palavras-chave do seu cargo-alvo · Experiências com resultados, não tarefas |
 | 9 | Resumo | Resumindo: não é sobre mandar *mais* currículo. É sobre ser *encontrado.* |
 | 10 | CTA | **Salva esse post** e manda pra alguém que está mandando currículo pra tudo. Quer parar de correr atrás de vaga e ser encontrado pelos recrutadores? **Link na bio.** |
 
@@ -33,7 +33,7 @@ Esse é o conselho que mais ouço… e o que mais deixa gente boa desempregada.
 
 Eu fui recrutadora por 6 anos. Do outro lado da mesa, a realidade é outra:
 → um sistema (ATS) filtra a maioria dos currículos antes de alguém ler
-→ currículo genérico, sem as palavras-chave da vaga, é descartado em segundos
+→ currículo genérico, sem as palavras-chave do cargo, é descartado em segundos
 → e quando a vaga é urgente, muitas vezes o recrutador nem divulga: vai direto ao LinkedIn buscar quem aparece
 
 Por isso mandar MAIS currículo não resolve. O que resolve é ser ENCONTRADO.
@@ -61,7 +61,7 @@ Mas eu passei 6 anos do outro lado da mesa, como recrutadora. E o que eu via era
 
 1. Uma vaga recebe centenas de currículos. Antes de qualquer pessoa ler, o ATS filtra a maioria.
 
-2. O ATS procura as palavras-chave da vaga. Currículo genérico, igual para todas as vagas, é descartado em segundos. 100 currículos barrados no filtro valem zero.
+2. O ATS procura as palavras-chave da vaga. Currículo genérico, sem as palavras-chave do cargo que você busca, é descartado em segundos. 100 currículos barrados no filtro valem zero.
 
 3. Quando a vaga era urgente, eu nem divulgava. Abria o LinkedIn, digitava o cargo e as palavras-chave… e chamava quem aparecia.
 
@@ -69,12 +69,12 @@ Ou seja: muita vaga é preenchida por quem é encontrado, não por quem manda ma
 
 O que muda na prática:
 
-❌ 50 currículos iguais por semana, para qualquer vaga
-✅ 10 vagas-alvo, com o currículo adaptado a cada uma
+❌ 50 currículos por semana, para qualquer vaga
+✅ Foco em 1 cargo-alvo, com um currículo pensado para ele
 
 E um LinkedIn que trabalha por você:
 → Título: o cargo que você quer + 2 especialidades
-→ Sobre: as palavras-chave das suas vagas-alvo
+→ Sobre: as palavras-chave do seu cargo-alvo
 → Experiências: resultados, não tarefas
 
 Não é sobre mandar mais currículo. É sobre ser encontrado.
