@@ -82,5 +82,5 @@ Se essa história é parecida com a sua, me conta aqui nos comentários. Eu leio
 ---
 
 ## NOTAS DE DESIGN
-- Mesmo visual do carrossel 01: capa preta com a sua foto, slides da narrativa em creme, o "fundo do poço" (slide 5) em preto, o insight (slide 8) em musgo e o CTA com a foto do notebook.
-- **Se tiver uma foto sua de formatura,** ela fica ótima no slide 1 ou no 2. É só me mandar que eu troco.
+- **Versão atual (orgânica):** cada slide tem uma foto sua de fundo, apagada (cores suavizadas + véu + grão). Dor (1–5) com véu escuro, virada (6–7) com véu claro, insight (8) em musgo, final (9–10) escuro. Fotos em `fotos/`.
+- **Versão 1 (clássica):** fundo liso nas cores da marca, guardada em `versao-1-classica/`.
